@@ -18,6 +18,7 @@ const App = () => {
    <div className="App">
      <div className = "border">
        <h1 className = "title">Todo List</h1>
+       <br></br>
         <div className = "adding">
           <form clasName ="inputTodo" onSubmit={handleSubmit}>
             <input type ="text" onChange={(e)=>SetTodo(e.target)}/>
