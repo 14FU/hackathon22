@@ -6,10 +6,10 @@
   justify-content: center;
   align-items: center;
   color:white;
-  background-color:black;
+  background-color:rgb(238, 190, 209);
 }
 .title {
-  color:antiquewhite;
+  color:rgb(252, 252, 252);
   font-family:monospace;
   font-style: oblique;
   align-items: baseline;
@@ -27,7 +27,7 @@
   font-size: 20px;
   align-items: center;
   color:white;
-  background-color:black;
+  background-color:rgb(236, 168, 200);
 }
 
 .inputTodo{
@@ -38,14 +38,14 @@
 }
 
 input{
-  width: 70%;
+  width: 60%;
   padding:10px;
   border-radius: 20px;
-  border: 2.5px solid pink
+  border: 2.5px solid rgb(58, 15, 22)
 }
 
 button{
-  border:none;
+  border:2px solid ;
   padding:10px;
   border-radius: 20px;
   margin: 0 5px;
@@ -55,7 +55,7 @@ button{
   border-radius: 50px;
   margin:10px 0;
   background-color: thistle;
-  border: 3px solid violet;
+  border: 3px solid rgb(3, 1, 3);
   padding: 10px 20px;
   display: flex;
   width: 400px;
