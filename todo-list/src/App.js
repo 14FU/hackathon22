@@ -14,13 +14,9 @@ const App = () => {
     }
 
   };
-  const handleDelete = (id) => {
-    const delTodo = todos,filter((to))=> to.id
-
-  }
   return(
-   <div className= "App">
-   <div className = "border">
+   <div className="App">
+     <div className = "border">
        <h1 className = "title">Todo List</h1>
         <div className = "adding">
           <form clasName ="inputTodo" onSubmit={handleSubmit}>
@@ -40,7 +36,7 @@ const App = () => {
             
           </form>
         </div>
-   </div>
-   </div>
+     </div>
+  </div>
   )};
 export default App;
