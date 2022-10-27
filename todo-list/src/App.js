@@ -8,19 +8,20 @@ import TDED from "./componenets/todoED"
 const App = () => {
   const [todo,setTodo] = useState("");
   const[todos,setTodos]= useState([]);
-  const[Updid,setUpdid]= useState([]);
+  const[updid,setupdid]= useState(0);
 
   const handleSubmit=(e)=>{
     e.preventDefault();
-    if (Updid){
-      const UpdateTodo = todos.find((i) => i.id === Updid);
+    
+    if (updid){
+      const UpdateTodo = todos.find((i) => i.id === updid);
       const updatedTOdos = todos.map((t) => 
-        t.id === Updid.id
+        t.id === updid.id
           ?(t={id:t.id,todo})
           :{id:t.id,todo:t.todo}
       );
       setTodos(updatedTOdos);
-      setUpdid(0)
+      setupdid(0)
       setTodo("")
       return;
     }
@@ -37,7 +38,7 @@ const App = () => {
   const handleUpdate=(id)=> {
     const updatetodo =todos.find((i) => i.id == id);
     setTodos(updatetodo.todo);
-    setUpdid(id);
+    setupdid(id);
   };
 
 
@@ -49,7 +50,7 @@ const App = () => {
        <formtodo
        handleSubmit={handleSubmit}
        todo={todo}
-       Updid={Updid}
+       updid={updid}
        setTodo={setTodo}
        />
        <TDED

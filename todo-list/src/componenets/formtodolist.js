@@ -1,6 +1,6 @@
 import React from "react";
 
-const formtodo =({todo,SetTodo,handleSubmit,Updid}) => {
+const formtodo =({todo,SetTodo,handleSubmit,updid}) => {
     return(
         <form clasName ="inputTodo" onSubmit={handleSubmit}>
             <input 
@@ -8,7 +8,7 @@ const formtodo =({todo,SetTodo,handleSubmit,Updid}) => {
             value ={todo}
             onChange={(e)=>SetTodo(e.target)}
             />
-           <button type= "submit">{Updid ? "Update":"Go"}</button> 
+           <button type= "submit">{updid ? "Update":"Go"}</button> 
         </form>
 
     );
