@@ -1,14 +1,17 @@
 import React from "react";
 import "./App.css";
 import {useState} from "react";
-import formtodo from "./componenets/formtodolist"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Formtodo from "./componenets/formtodolist"
 import TDED from "./componenets/todoED"
+import logo from "../src/download.jpg"
 // import AddUIItem from "./TodoList";
 
 const App = () => {
   const [todo,setTodo] = useState("");
   const[todos,setTodos]= useState([]);
   const[updid,setupdid]= useState(0);
+  const[completed,setCompleted]= useState(true);
 
   const handleSubmit=(e)=>{
     e.preventDefault();
@@ -24,11 +27,9 @@ const App = () => {
       setupdid(0)
       setTodo("")
       return;
-    }
-
-    if (todo !==''){
+    } else if (todo !==''){
       setTodos([{id: `${todo}-${Date.now()}`,todo}, ...todos]);
-      setTodos("");
+      setTodo("");
     }
   };
   const handleDelete=(id)=> {
@@ -41,18 +42,21 @@ const App = () => {
     setupdid(id);
   };
 
+  const handleComplete=(data)=>{
+    if (data == "Completed")
+  }
 
   return(
    <div className="App">
      <div className = "border">
        <h1 className = "title">TODO LIST</h1>
-       <br></br>
-       <formtodo
+       <img src={logo} className="title" alt="logo" />
+       <Formtodo
        handleSubmit={handleSubmit}
        todo={todo}
        updid={updid}
        setTodo={setTodo}
-       />
+      />
        <TDED
        todos={todos}
        handleUpdate={handleUpdate}

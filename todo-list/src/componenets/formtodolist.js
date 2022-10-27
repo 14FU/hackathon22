@@ -1,16 +1,16 @@
 import React from "react";
 
-const formtodo =({todo,SetTodo,handleSubmit,updid}) => {
-    return(
-        <form clasName ="inputTodo" onSubmit={handleSubmit}>
-            <input 
-            type ="text" 
-            value ={todo}
-            onChange={(e)=>SetTodo(e.target)}
+const Formtodo = ({ todo, setTodo, handleSubmit, updid }) => {
+    return (
+        <form className="inputTodo" onSubmit={handleSubmit}>
+            <input
+                type="text"
+                value={todo}
+                onChange={(e) => setTodo(e.target.value)}
             />
-           <button type= "submit">{updid ? "Update":"Go"}</button> 
+            <button type="submit">{updid ? "Update" : "Go"}</button>
         </form>
 
     );
 }
-export default formtodo
+export default Formtodo
