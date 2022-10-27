@@ -16,7 +16,7 @@ const App = () => {
       const UpdateTodo = todos.find((i) => i.id === Updid);
       const updatedTOdos = todos.map((t) => 
         t.id === Updid.id
-          ?(t={id:i.id, tdod})
+          ?(t={id:t.id,todo})
           :{id:t.id,todo:t.todo}
       );
       setTodos(updatedTOdos);
