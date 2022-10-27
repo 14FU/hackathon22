@@ -1,6 +1,6 @@
 import react from "react";
 
-const TDED = ({}) => {
+const TDED = ({todos, handleDelete, handleUpdate}) => {
     return(
         <ul className = "inputDisp">
             {todos.map((t)=>(

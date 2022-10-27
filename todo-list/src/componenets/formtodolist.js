@@ -1,6 +1,6 @@
 import React from "react";
 
-const formtodo =({}) => {
+const formtodo =({todo,SetTodo,handleSubmit,Updid}) => {
     return(
         <form clasName ="inputTodo" onSubmit={handleSubmit}>
             <input 
