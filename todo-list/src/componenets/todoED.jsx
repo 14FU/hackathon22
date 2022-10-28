@@ -1,4 +1,6 @@
-import react from "react";
+import React from "react";
+import Card from 'react-bootstrap/Card';
+//const check = React.createElement('input',{type:'checkbox',defaultChecked:false});
 
 const TDED = ({todos, handleDelete, handleUpdate,handleComplete,setCompleted,completed}) => {
     return(
@@ -14,6 +16,7 @@ const TDED = ({todos, handleDelete, handleUpdate,handleComplete,setCompleted,com
                     <button onClick={()=> handleDelete(t.id)}>Delete</button>
                     <br/>
                     <input type= "checkbox"onChange={(e) => setCompleted(e.target.completed)}/>
+                    {/* <input>{check}</input> */}
                     <label onClick ={()=> handleComplete(t.id)}>Mark as complete</label>
                 </li>
             ))}
