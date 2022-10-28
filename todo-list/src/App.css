@@ -9,9 +9,9 @@
   background-color:grey;
 }
 .App-logo {
-  height: 40vmin;
-  align-content: space-around;
-  display: flex;
+  height: 15vmin;
+  display:flex;
+  position: sticky;
 }
 .title {
   color:pink;

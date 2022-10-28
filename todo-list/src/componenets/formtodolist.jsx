@@ -3,6 +3,7 @@ import React from "react";
 const Formtodo = ({ todo, setTodo, handleSubmit, updid }) => {
     return (
         <form className="inputTodo" onSubmit={handleSubmit}>
+            
             <input
                 type="text"
                 value={todo}

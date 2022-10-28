@@ -3,9 +3,9 @@ import "./App.css";
 import {useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Formtodo from "./componenets/formtodolist"
-import TDED from "./componenets/todoED"
-import logo from "../src/download.jpg"
-import Card from "react-bootstrap/Card"
+import TDED from "./componenets/todoED";
+import logo from "../src/download.png";
+import Card from "react-bootstrap/Card";
 import { findAllByTestId } from "@testing-library/dom";
 // import AddUIItem from "./TodoList";
 
@@ -54,8 +54,10 @@ const App = () => {
   return(
    <div className="App">
      <div className = "border">
-       <h1 className = "title">TODO LIST</h1>
-       {/* <img src={logo} className="title" alt="logo" /> */}
+       <li>
+         <img src={logo} className="App-logo" alt="logo" />
+         <h1 className = "title">TODO LIST</h1>
+       </li>
        <Formtodo
        handleSubmit={handleSubmit}
        todo={todo}
