@@ -16,6 +16,8 @@
 .title {
   color:pink;
   font-style:normal;
+  justify-content: center;
+  text-align: center;
   font-size: 50px;
   align-items: center;
   display: flex;
@@ -45,7 +47,7 @@ code {
 
 .inputTodo{
   display: flex;
-  width: 300px;
+  width: 700px;
   justify-content:space-around;
   border-radius: 20px;
 }
@@ -71,7 +73,7 @@ button{
   border: 1px solid black;
   padding: 10px 20px;
   display: flex;
-  width: 400px;
+  width: 700px;
   align-items: center;
 
   

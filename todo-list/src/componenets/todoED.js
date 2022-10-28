@@ -1,6 +1,6 @@
 import react from "react";
 
-const TDED = ({todos, handleDelete, handleUpdate,handleComplete}) => {
+const TDED = ({todos, handleDelete, handleUpdate,handleComplete,setCompleted,completed}) => {
     return(
         <ul className = "inputDisp">
             {todos.map((t)=>(
@@ -12,7 +12,9 @@ const TDED = ({todos, handleDelete, handleUpdate,handleComplete}) => {
                     <button onClick ={()=>handleUpdate(t.id)}>Update</button>
                     <br/>
                     <button onClick={()=> handleDelete(t.id)}>Delete</button>
-                    <label><input type= "checkbox" onChange= {() => handleComplete("completed")}>completed</input></label>
+                    <br/>
+                    <input type= "checkbox"onChange={(e) => setCompleted(e.target.completed)}/>
+                    <label onClick ={()=> handleComplete(t.id)}>Mark as completed</label>
                 </li>
             ))}
       </ul>

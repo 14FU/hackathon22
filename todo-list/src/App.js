@@ -10,8 +10,8 @@ import logo from "../src/download.jpg"
 const App = () => {
   const [todo,setTodo] = useState("");
   const[todos,setTodos]= useState([]);
-  const[updid,setupdid]= useState(0);
-  const[completed,setCompleted]= useState(true);
+  const[updid,setUpdid]= useState(0);
+  const[completed,setCompleted]= useState(false);
 
   const handleSubmit=(e)=>{
     e.preventDefault();
@@ -24,7 +24,7 @@ const App = () => {
           :{id:t.id,todo:t.todo}
       );
       setTodos(updatedTOdos);
-      setupdid(0)
+      setUpdid(0)
       setTodo("")
       return;
     } else if (todo !==''){
@@ -37,20 +37,24 @@ const App = () => {
     setTodos([...deletetodo])
   };
   const handleUpdate=(id)=> {
-    const updatetodo =todos.find((i) => i.id == id);
-    setTodos(updatetodo.todo);
-    setupdid(id);
+    const updatetodo =todos.find((i) => i.id === id);
+    setTodos(...updatetodo);
+    setUpdid(id);
   };
 
-  const handleComplete=(data)=>{
-    if (data == "Completed")
+  const handleComplete =(id)=>{
+    const completetodo =todos.find((i) => i.id ===id);
+    setTodos(...completetodo.todo);
+    setCompleted(true)
+
+
   }
 
   return(
    <div className="App">
      <div className = "border">
        <h1 className = "title">TODO LIST</h1>
-       <img src={logo} className="title" alt="logo" />
+       {/* <img src={logo} className="title" alt="logo" /> */}
        <Formtodo
        handleSubmit={handleSubmit}
        todo={todo}
