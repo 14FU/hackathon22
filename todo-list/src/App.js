@@ -46,9 +46,7 @@ const App = () => {
     const completetodo =todos.find((i) => i.id ===id);
     setTodos(...completetodo.todo);
     setCompleted(true)
-
-
-  }
+  };
 
   return(
    <div className="App">

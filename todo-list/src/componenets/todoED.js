@@ -14,7 +14,7 @@ const TDED = ({todos, handleDelete, handleUpdate,handleComplete,setCompleted,com
                     <button onClick={()=> handleDelete(t.id)}>Delete</button>
                     <br/>
                     <input type= "checkbox"onChange={(e) => setCompleted(e.target.completed)}/>
-                    <label onClick ={()=> handleComplete(t.id)}>Mark as completed</label>
+                    <label onClick ={()=> handleComplete(t.id)}>Mark as complete</label>
                 </li>
             ))}
       </ul>

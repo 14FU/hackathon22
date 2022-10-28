@@ -25,9 +25,8 @@
 
 }
 .border{
-  border: 10px white;
+  border: double 30px white;
   padding: 20%;
-  border-style:double;
   
 }
 
@@ -47,7 +46,7 @@ code {
 
 .inputTodo{
   display: flex;
-  width: 700px;
+  width: 500px;
   justify-content:space-around;
   border-radius: 20px;
 }
@@ -73,7 +72,7 @@ button{
   border: 1px solid black;
   padding: 10px 20px;
   display: flex;
-  width: 700px;
+  width: 500px;
   align-items: center;
 
   
